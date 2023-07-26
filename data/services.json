@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Housing",
+    "description": "Our housing page provides a specialized experience for users where reviews for user profiles, for both the landlord and the renter will be available for a more accountable approach to housing",
+    "Image": "/assets/images/housing.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Community",
+    "description": "A consequence of moving away from your home is a loss of network, and isolation which affects the quality of your mental health. The reformation of a similar network, perhaps even a support system takes time - the availability of a hub where one can find these connections may be beneficial.",
+    "Image": "/assets/images/community.png"
+  },
+  {
+    "id": 3,
+    "title": "The Law Liaison",
+    "description": "Most people are unaware of the laws of the United States, relating to state and federal laws, and in effect, their rights. This is a commonly found trait in international students and other immigrants - at times people find themselves in a situation where knowing the law, and more importantly being able to get legal help is needed, but a solution catered to specifically this issue is not yet available. This will also include information on health insurance and information on access to healthcare facilities.",
+    "Image": "/assets/images/community.png"
+  },
+  {
+    "id": 3,
+    "title": "Personalized Service",
+    "description": "We are also working to provide a personalized service to students in unique situations where we help them at each step along the way, including finding the best flights, matching housing for them, and connecting them to their new local community by matching them with one of our agents.",
+    "Image": "/assets/images/community.png"
+  }
+]

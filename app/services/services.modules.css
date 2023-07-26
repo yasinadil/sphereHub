@@ -1,0 +1,71 @@
+code {
+  font-family: input-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--background);
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.services {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: center;
+  perspective: 500px;
+}
+
+.services > div {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  max-height: 90vh;
+  margin: 20px;
+  background: inherit;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .services > div {
+    width: 280px;
+    height: 380px;
+    position: relative;
+    max-height: 90vh;
+    margin: 20px;
+    background: inherit;
+    overflow: hidden;
+  }
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  bottom: 100px;
+}
+
+.card {
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba(1, 0, 0, 0.124);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
