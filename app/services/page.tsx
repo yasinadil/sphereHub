@@ -54,7 +54,7 @@ export default function Page() {
     restDelta: 0.001,
   });
   return (
-    <div className="bg-white dark:bg-neutral-900 ">
+    <div className="bg-white dark:bg-neutral-900">
       <div className="pt-36">
         {/* <h1 className="text-4xl font-bold text-center mb-14">Services</h1> */}
         {/* <div className="flex flex-col gap-y-5 items-center">

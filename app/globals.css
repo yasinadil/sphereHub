@@ -15,7 +15,7 @@
 .card {
   backdrop-filter: blur(10px) saturate(180%);
   -webkit-backdrop-filter: blur(10px) saturate(180%);
-  background-color: rgba(1, 0, 0, 0.124);
+  background-color: rgba(255, 255, 255, 0.124);
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
@@ -47,4 +47,38 @@ body {
   padding: 0;
   background-color: var(--background);
   /* color: var(--accent); */
+}
+
+.example-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next,
+.prev {
+  top: calc(50% - 20px);
+  position: absolute;
+  background: white;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+  transform: scale(-1);
 }
