@@ -1,6 +1,6 @@
 [
   {
-    "amenity": "Wifi"
+    "amenity": "WIFI"
   },
   {
     "amenity": "Kitchen"
@@ -10,5 +10,8 @@
   },
   {
     "amenity": "Dryer"
+  },
+  {
+    "amenity": "Pets"
   }
 ]

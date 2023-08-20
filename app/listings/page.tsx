@@ -12,8 +12,17 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Check, ChevronsUpDown } from "lucide-react";
 import ListingCard from "@/components/ListingCard/ListingCard";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Slider } from "@/components/ui/slider";
+import { Checkbox } from "@/components/ui/checkbox";
 
 interface UniversityData {
   institution: string;
@@ -21,6 +30,10 @@ interface UniversityData {
 
 export default function Listings() {
   // Sorting function
+  const [open, setOpen] = React.useState(false);
+  const [openMobile, setOpenMobile] = React.useState(false);
+  const [value, setValue] = React.useState("");
+  const [beds, setBeds] = React.useState(1);
   const sortDataAlphabetically = (data: UniversityData[]): UniversityData[] => {
     return data.slice().sort((a, b) => {
       const institutionA = a.institution.toLowerCase();
@@ -34,11 +47,11 @@ export default function Listings() {
 
   return (
     <div
-      className="grid grid-rows-3 grid-flow-col grid-cols-4 gap-4 bg-white dark:bg-neutral-900 text-black dark:text-white h-screen px-5"
+      className="md:grid md:grid-rows-3 md:grid-flow-col md:grid-cols-4 gap-4 text-black dark:text-white min-h-screen md:h-screen px-5"
       suppressHydrationWarning={true}
     >
-      <div className="row-span-3 mt-32 flex flex-col gap-8">
-        <Command className="rounded-lg shadow-md h-fit">
+      <div className="row-span-3 mt-32 flex-col gap-8 hidden md:flex">
+        {/* <Command className="rounded-lg shadow-md h-fit">
           <CommandInput placeholder="Type a command or search..." />
           <CommandList className="">
             <CommandEmpty>No results found.</CommandEmpty>
@@ -46,12 +59,11 @@ export default function Listings() {
               {sortedAndFilteredData.map((university, index) => {
                 return (
                   // <li key={index}>{university.institution}</li>
-                  <CommandItem key={index} className="list-none">
+                  <CommandItem key={index} className="list-none cursor-pointer">
                     <div className="flex items-center space-x-2">
-                      <Checkbox id={university.institution} />
                       <label
                         htmlFor={university.institution}
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
                       >
                         {university.institution}
                       </label>
@@ -61,34 +73,81 @@ export default function Listings() {
               })}
             </CommandGroup>
           </CommandList>
-        </Command>
+        </Command> */}
+        <Popover open={open} onOpenChange={setOpen}>
+          <PopoverTrigger asChild>
+            <Button
+              variant="outline"
+              role="combobox"
+              aria-expanded={open}
+              className="w-full justify-between"
+            >
+              {value ? value : "Select University..."}
+              <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-full p-0">
+            <Command>
+              <CommandInput placeholder="Search framework..." />
+              <CommandEmpty>No framework found.</CommandEmpty>
+              <CommandGroup>
+                <ScrollArea className=" h-80">
+                  {sortedAndFilteredData.map((uni, index) => (
+                    <CommandItem
+                      key={index}
+                      onSelect={(currentValue) => {
+                        setValue(currentValue);
+                        setOpen(false);
+                      }}
+                    >
+                      <Check
+                        className={cn(
+                          "mr-2 h-4 w-4",
+                          value === uni.institution
+                            ? "opacity-100"
+                            : "opacity-0"
+                        )}
+                      />
+                      {uni.institution}
+                    </CommandItem>
+                  ))}
+                </ScrollArea>
+              </CommandGroup>
+            </Command>
+          </PopoverContent>
+        </Popover>
         <div className="px-2">
           <h1 className="mb-2">Beds</h1>
-          <input type="range" min={0} max="100" className="range" step="25" />
-          <div className="w-full flex justify-between text-xs px-2">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5+</span>
+          <div className="flex gap-x-2">
+            <Slider
+              className="mb-2 cursor-pointer"
+              defaultValue={[1]}
+              min={1}
+              max={5}
+              step={1}
+              onValueChange={(value: number[]) => setBeds(value[0])}
+            />
           </div>
+          <span className="float-right">{beds == 5 ? "5+" : beds}</span>
         </div>
         <div className="px-2">
           <h1 className="mb-2">Ameneties</h1>
           <div className="flex flex-col gap-2">
             {ameneties.map((amenity: any, index: number) => {
               return (
-                <div key={index} className="flex items-center space-x-2">
-                  <input
-                    type="checkbox"
-                    className="checkbox checkbox-sm border-slate-500"
-                  />
-                  <label
-                    htmlFor="terms"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    {amenity.amenity}
-                  </label>
+                <div key={index} className="items-top flex space-x-2">
+                  <Checkbox id={amenity.amenity} />
+                  <div className="grid gap-1.5 leading-none">
+                    <label
+                      htmlFor={amenity.amenity}
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      {amenity.amenity}
+                    </label>
+                    {/* <p className="text-sm text-muted-foreground">
+          You agree to our Terms of Service and Privacy Policy.
+        </p> */}
+                  </div>
                 </div>
               );
             })}
@@ -96,7 +155,92 @@ export default function Listings() {
         </div>{" "}
       </div>
 
-      <ScrollArea className="row-span-3 col-span-3 mt-32 px-2">
+      <div className="block md:hidden">
+        <div className="pt-28 flex flex-col gap-y-4">
+          <Popover open={openMobile} onOpenChange={setOpenMobile}>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                role="combobox"
+                aria-expanded={openMobile}
+                className="w-full justify-between"
+              >
+                {value ? value : "Select University..."}
+                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-full p-0">
+              <Command>
+                <CommandInput placeholder="Search framework..." />
+                <CommandEmpty>No framework found.</CommandEmpty>
+                <CommandGroup>
+                  <ScrollArea className="h-80">
+                    {sortedAndFilteredData.map((uni, index) => (
+                      <CommandItem
+                        key={index}
+                        onSelect={(currentValue) => {
+                          setValue(currentValue);
+                          setOpenMobile(false);
+                        }}
+                      >
+                        <Check
+                          className={cn(
+                            "mr-2 h-4 w-4",
+                            value === uni.institution
+                              ? "opacity-100"
+                              : "opacity-0"
+                          )}
+                        />
+                        {uni.institution}
+                      </CommandItem>
+                    ))}
+                  </ScrollArea>
+                </CommandGroup>
+              </Command>
+            </PopoverContent>
+          </Popover>
+          <div className="px-2">
+            <h1 className="mb-2">
+              Beds{" "}
+              <span className="float-right">{beds == 5 ? "5+" : beds}</span>
+            </h1>
+
+            <Slider
+              className="mb-2 cursor-pointer"
+              defaultValue={[1]}
+              min={1}
+              max={5}
+              step={1}
+              onValueChange={(value: number[]) => setBeds(value[0])}
+            />
+          </div>
+          <div className="px-2">
+            <h1 className="mb-2">Ameneties</h1>
+            <div className="flex flex-col gap-2">
+              {ameneties.map((amenity: any, index: number) => {
+                return (
+                  <div key={index} className="items-top flex space-x-2">
+                    <Checkbox id={amenity.amenity} />
+                    <div className="grid gap-1.5 leading-none">
+                      <label
+                        htmlFor={amenity.amenity}
+                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      >
+                        {amenity.amenity}
+                      </label>
+                      {/* <p className="text-sm text-muted-foreground">
+          You agree to our Terms of Service and Privacy Policy.
+        </p> */}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>{" "}
+        </div>
+      </div>
+
+      <ScrollArea className="md:row-span-3 md:col-span-3 pt-10 md:pt-32 px-2">
         <div className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-2">
           {listings.map((house, index) => {
             return (

@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./globalsheet.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/ThemeProvider/themeprovider";
@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={`${roboto.className} bg-white dark:bg-neutral-900`}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <Navbar />
           {children}

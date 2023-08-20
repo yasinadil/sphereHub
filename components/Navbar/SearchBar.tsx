@@ -20,8 +20,8 @@ import {
 
 export function SearchBar() {
   return (
-    <Command className="rounded-lg md:rounded-full border shadow-sm">
-      <CommandInput placeholder="Search by city or university..." />
+    <Command className="rounded-lg md:rounded-full border shadow w-full md:w-[500px] border-none">
+      <CommandInput placeholder="Find your new home..." />
       {/* <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Suggestions">

@@ -1,11 +1,9 @@
 import Hero from "@/components/Hero/Hero";
 import Stats from "@/components/Stats/Stats";
-import Image from "next/image";
-import housing from "../public/assets/images/house-graphics.jpg";
 
 export default function Home() {
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="min-h-screen pt-20 2xl:pt-32">
       <Hero />
       <Stats />
     </div>

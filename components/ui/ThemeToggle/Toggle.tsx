@@ -39,7 +39,7 @@ export function ModeToggle() {
 
     // </DropdownMenu>
     <Button
-      variant="ghost"
+      variant="secondary"
       size="icon"
       onClick={() => {
         theme == "light" ? setTheme("dark") : setTheme("light");

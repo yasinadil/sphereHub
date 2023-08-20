@@ -3,7 +3,6 @@ import React from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -19,9 +18,9 @@ export default function Navbar() {
     <div>
       <div className="block md:hidden text-black dark:text-white">
         <div className="fixed top-5 z-10 left-[50%] translate-x-[-50%]">
-          <div className="flex w-[90vw] md:w-[50vw] justify-between items-center py-2 px-4 rounded-full dark:bg-neutral-800 bg-white">
-            <h1 className="font-semibold">
-              <Link href={"/"}>sphereHub</Link>
+          <div className="flex w-[95vw] md:w-[50vw] justify-between items-center py-2 px-4 rounded-full glasscard">
+            <h1 className="font-semibold text-white">
+              <Link href={"/"}>Sphere Hub</Link>
             </h1>
             <div className="flex justify-between items-center gap-2">
               <NavigationMenu>
@@ -38,8 +37,8 @@ export default function Navbar() {
                         <path
                           d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z"
                           fill="currentColor"
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
+                          fillRule="evenodd"
+                          clipRule="evenodd"
                         ></path>
                       </svg>
                     </NavigationMenuTrigger>
@@ -123,10 +122,11 @@ export default function Navbar() {
       </div>
       <div className="hidden md:block text-black dark:text-white">
         <div className="fixed z-10 top-5 left-[50%] translate-x-[-50%]">
-          <div className="flex w-[90vw] md:w-[80vw] justify-between items-center py-4 px-8 rounded-full dark:bg-neutral-800 bg-gray-100">
-            <h1 className="font-semibold text-xl">
-              <Link href={"/"}>sphereHub</Link>
+          <div className="flex w-[90vw] md:w-[80vw] justify-between items-center py-2 px-8 rounded-full bg-[#1339B1]">
+            <h1 className="font-semibold text-xl text-white">
+              <Link href={"/"}>Sphere Hub</Link>
             </h1>
+            <SearchBar />
             <div className="flex justify-between items-center gap-4">
               <NavigationMenu>
                 <NavigationMenuList>
@@ -177,7 +177,7 @@ export default function Navbar() {
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
-              <SearchBar />
+
               <ModeToggle />
             </div>
           </div>
