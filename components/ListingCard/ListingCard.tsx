@@ -42,7 +42,7 @@ export default function ListingCard(props: any) {
         <Card>
           <CardHeader>
             <div className="m-auto relative">
-              <div className="w-full h-full md:w-[274px] md:h-[182px] rounded-2xl bg-center bg-cover aspect-video">
+              <div className="w-full h-full rounded-2xl bg-center bg-cover aspect-video">
                 <Image
                   className="w-full h-full rounded-md object-cover duration-700"
                   src={rooms[currentIndex]}

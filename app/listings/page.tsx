@@ -80,7 +80,7 @@ export default function Listings() {
               variant="outline"
               role="combobox"
               aria-expanded={open}
-              className="w-full justify-between"
+              className="w-full justify-between z-10"
             >
               {value ? value : "Select University..."}
               <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
@@ -135,7 +135,7 @@ export default function Listings() {
           <div className="flex flex-col gap-2">
             {ameneties.map((amenity: any, index: number) => {
               return (
-                <div key={index} className="items-top flex space-x-2">
+                <div key={index} className="items-top flex space-x-2 z-10">
                   <Checkbox id={amenity.amenity} />
                   <div className="grid gap-1.5 leading-none">
                     <label
