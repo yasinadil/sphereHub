@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+// import { ThemeProvider } from "@/components/ui/ThemeProvider/themeprovider";
 import Navbar from "@/components/Navbar/Navbar";
 
 const manrope = Manrope({
@@ -19,12 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html className="dark" lang="en">
-      <body className={`${manrope.className} bg-white dark:bg-black relative`}>
-        <div className="absolute w-full h-full bg-[length:64px] bg-repeat bg-[url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png')] opacity-10"></div>
-        {/* <ThemeProvider attribute="class" defaultTheme="dark"> */}
+      <body className={`${manrope.className} relative`}>
+        <div className="absolute w-full h-full bg-white dark:bg-black -z-20"></div>
+        <div className="absolute w-full h-full bg-[length:64px] bg-repeat bg-[url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png')] opacity-10 -z-10"></div>
+
         <Navbar />
         {children}
-        {/* </ThemeProvider> */}
       </body>
     </html>
   );
