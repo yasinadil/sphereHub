@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.className} bg-white dark:bg-black relative`}>
         <div className="absolute w-full h-full bg-[length:64px] bg-repeat bg-[url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png')] opacity-10"></div>
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
           {children}
         </ThemeProvider>
