@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
-import { ThemeProvider } from "@/components/ui/ThemeProvider/themeprovider";
 import Navbar from "@/components/Navbar/Navbar";
 
 const manrope = Manrope({
