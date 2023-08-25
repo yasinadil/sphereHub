@@ -33,27 +33,27 @@ html {
   perspective: 500px;
 }
 
-.services > div {
-  width: 400px;
+/* .services > div {
+  width: 700px;
   height: 300px;
   position: relative;
   max-height: 90vh;
   margin: 20px;
   background: inherit;
   overflow: hidden;
-}
-
-@media only screen and (max-width: 600px) {
+} */
+/* 
+@media only screen and (max-width: 800px) {
   .services > div {
     width: 280px;
-    height: 380px;
+    height: 450px;
     position: relative;
     max-height: 90vh;
     margin: 20px;
     background: inherit;
     overflow: hidden;
   }
-}
+} */
 
 .progress {
   position: fixed;

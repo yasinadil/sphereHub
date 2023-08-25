@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: Circular;
+  font-family: "Circular";
   src: url("/assets/fonts/CircularStd-Bold.otf");
 }
 
 @font-face {
-  font-family: CircularParagraph;
+  font-family: "CircularParagraph";
   src: url("/assets//fonts//CircularStd-Light.otf");
 }
 
@@ -24,14 +24,6 @@
   -webkit-backdrop-filter: blur(8px) saturate(180%);
   background-color: rgba(19, 57, 177, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.125);
-}
-
-h1 {
-  font-family: Circular;
-}
-
-p {
-  font-family: CircularParagraph;
 }
 
 body {

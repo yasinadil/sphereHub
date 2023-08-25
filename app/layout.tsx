@@ -1,12 +1,11 @@
-import "./globalsheet.css";
+import "./globals.css";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Manrope } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/ThemeProvider/themeprovider";
 import Navbar from "@/components/Navbar/Navbar";
 
-const roboto = Roboto({
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: "300",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-white dark:bg-neutral-900`}>
+      <body className={`${manrope.className} bg-white dark:bg-black relative`}>
+        <div className="absolute w-full h-full bg-[length:64px] bg-repeat bg-[url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png')] opacity-10"></div>
         <ThemeProvider attribute="class" defaultTheme="light">
           <Navbar />
           {children}
@@ -29,4 +29,8 @@ export default function RootLayout({
       </body>
     </html>
   );
+}
+
+{
+  /* <div style="width:100%;height:100%;background-size:64px;background-repeat:repeat;background-image:url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');opacity:0.08;border-radius:0"></div> */
 }

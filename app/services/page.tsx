@@ -32,11 +32,13 @@ function Images({
   return (
     <div className="services">
       <div
-        className="border border-gray-400 shadow-md shadow-gray-800 dark:border-gray-800 p-5 rounded-2xl text-black dark:text-white"
+        className="border border-gray-400 shadow-md shadow-gray-800 dark:border-gray-800 p-5 rounded-2xl text-black dark:text-white bg-white dark:bg-black
+        md:w-[700px] md:h-[300px] relative max-h-[90vh] m-[20px] bg-inherit overflow-hidden
+        w-[280px] h-max"
         ref={ref}
       >
-        <h1>{title}</h1>
-        <p>{description}</p>
+        <h1 className="text-xl md:text-2xl md:pb-8 font-semibold">{title}</h1>
+        <p className="md:text-lg">{description}</p>
       </div>
       <motion.h2
         className="text-xl font-black text-black dark:text-white"
@@ -78,7 +80,7 @@ export default function Page() {
         <>
           <Images
             id={1}
-            description="Our housing page provides a specialized experience for users where reviews for user profiles, for both the landlord and the renter will be available for a more accountable approach to housing"
+            description="Our housing page provides a specialized experience for users where reviews for user profiles, for both the landlord and the renter will be available for a more accountable approach to housing."
             title="Housing"
           />
           <Images

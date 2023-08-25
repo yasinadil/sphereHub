@@ -17,10 +17,10 @@ export default function Navbar() {
   return (
     <div>
       <div className="block md:hidden text-black dark:text-white">
-        <div className="fixed top-5 z-10 left-[50%] translate-x-[-50%]">
-          <div className="flex w-[95vw] md:w-[50vw] justify-between items-center py-2 px-4 rounded-full glasscard">
+        <div className="fixed z-20 left-[50%] translate-x-[-50%]">
+          <div className="flex w-screen justify-between items-center py-2 px-4 glasscard">
             <h1 className="font-semibold text-white">
-              <Link href={"/"}>Sphere Hub</Link>
+              <Link href={"/"}>SphereHub</Link>
             </h1>
             <div className="flex justify-between items-center gap-2">
               <NavigationMenu>
@@ -68,7 +68,7 @@ export default function Navbar() {
                         ></path>
                       </svg>
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent className="pt-8">
+                    <NavigationMenuContent className="py-8">
                       <Link href="/services" legacyBehavior passHref>
                         <NavigationMenuLink
                           className={navigationMenuTriggerStyle()}
@@ -109,9 +109,9 @@ export default function Navbar() {
                           Blog
                         </NavigationMenuLink>
                       </Link>
-                      <div className="flex justify-end p-2">
+                      {/* <div className="flex justify-end p-2">
                         <ModeToggle />
-                      </div>
+                      </div> */}
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                 </NavigationMenuList>
@@ -121,17 +121,19 @@ export default function Navbar() {
         </div>
       </div>
       <div className="hidden md:block text-black dark:text-white">
-        <div className="fixed z-10 top-5 left-[50%] translate-x-[-50%]">
-          <div className="flex w-[90vw] md:w-[80vw] justify-between items-center py-2 px-8 rounded-full bg-[#1339B1]">
+        <div className="fixed z-20 left-[50%] translate-x-[-50%]">
+          <div className="flex w-screen justify-between items-center py-2 px-8 glasscard">
             <h1 className="font-semibold text-xl text-white">
-              <Link href={"/"}>Sphere Hub</Link>
+              <Link href={"/"}>SphereHub</Link>
             </h1>
             <SearchBar />
             <div className="flex justify-between items-center gap-4">
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>Explore</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="dark:bg-transparent bg-transparent text-lg">
+                      Explore
+                    </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <Link href="/services" legacyBehavior passHref>
                         <NavigationMenuLink
@@ -178,7 +180,7 @@ export default function Navbar() {
                 </NavigationMenuList>
               </NavigationMenu>
 
-              <ModeToggle />
+              {/* <ModeToggle /> */}
             </div>
           </div>
         </div>
