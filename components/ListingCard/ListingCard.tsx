@@ -14,6 +14,7 @@ import room2 from "../../public/assets/images/listings/2.jpg";
 import room3 from "../../public/assets/images/listings/3.jpg";
 import { RxDotFilled } from "react-icons/rx";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 const rooms = [room1, room2, room3];
 
@@ -78,7 +79,9 @@ export default function ListingCard(props: any) {
 
             <CardTitle className="">
               <div className="flex justify-between mt-2 pl-2">
-                <h1 className="">{props.title}</h1>
+                <h1 className="">
+                  <Link href={"/listing/3636399"}>{props.title}</Link>
+                </h1>
                 <div className="flex gap-1">
                   <svg
                     width="15"
