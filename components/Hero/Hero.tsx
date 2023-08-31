@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { Terminal, Waves } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 export default function Hero() {
   return (
@@ -35,7 +37,18 @@ export default function Hero() {
           </p> */}
         </div>
       </div>
-      <div>
+      <Link href={"/profile/193621"}>
+        <Alert>
+          <Terminal className="h-4 w-4" />
+          <AlertTitle>Heads up!</AlertTitle>
+          <AlertDescription>
+            You can now use our{" "}
+            <span className="font-black text-[#4c74ec]"> roommate finder </span>{" "}
+            tool to match with potential roomies!
+          </AlertDescription>
+        </Alert>
+      </Link>
+      <div className="mt-4">
         <div className="py-4">
           <h2 className="text-2xl md:text-3xl font-semibold text-black dark:text-white pb-0 md:pb-1">
             housing
