@@ -79,11 +79,7 @@ export default function Profile() {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input
-                      className="max-w-[300px]"
-                      placeholder="Hamza Umar"
-                      {...field}
-                    />
+                    <Input className="" placeholder="Hamza Umar" {...field} />
                   </FormControl>
                   <FormDescription>
                     This is your public display name.
