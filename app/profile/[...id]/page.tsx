@@ -34,6 +34,7 @@ const formSchema = z.object({
   vegetarian: z.boolean().default(false).optional(),
   carnivore: z.boolean().default(false).optional(),
   halal: z.boolean().default(false).optional(),
+  kosher: z.boolean().default(false).optional(),
   studyHabit: z.string(),
   education: z.string(),
 });
@@ -43,6 +44,7 @@ export default function Profile() {
   const [vegetarian, isVegetarian] = useState(false);
   const [carnivore, isCarnivore] = useState(false);
   const [halal, isHalal] = useState(false);
+  const [kosher, isKosher] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -55,6 +57,7 @@ export default function Profile() {
       vegetarian: false,
       carnivore: false,
       halal: false,
+      kosher: false,
       studyHabit: "",
       education: "",
     },
@@ -272,6 +275,20 @@ export default function Profile() {
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
                   Halal
+                </label>
+              </div>
+              <div className="flex items-center gap-x-2">
+                <input
+                  type="checkbox"
+                  onChange={() => isKosher(!kosher)}
+                  checked={kosher}
+                  className="checkbox"
+                />
+                <label
+                  htmlFor="kosher"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Kosher
                 </label>
               </div>
             </div>

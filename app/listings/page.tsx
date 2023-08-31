@@ -23,6 +23,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Slider } from "@/components/ui/slider";
 import { Checkbox } from "@/components/ui/checkbox";
+import MultiRangeSlider from "@/components/MultiRangeSlider/MultiRangeSlider";
 
 interface UniversityData {
   institution: string;
@@ -35,6 +36,7 @@ export default function Listings() {
   const [value, setValue] = React.useState("");
   const [beds, setBeds] = React.useState(1);
   const [miles, setMiles] = React.useState(1);
+  const [busMiles, setBusMiles] = React.useState(1);
   const sortDataAlphabetically = (data: UniversityData[]): UniversityData[] => {
     return data.slice().sort((a, b) => {
       const institutionA = a.institution.toLowerCase();
@@ -51,7 +53,7 @@ export default function Listings() {
       className="md:grid md:grid-rows-3 md:grid-flow-col md:grid-cols-4 gap-4 text-black dark:text-white min-h-screen md:h-screen px-5"
       suppressHydrationWarning={true}
     >
-      <div className="row-span-3 mt-32 flex-col gap-8 hidden md:flex">
+      <div className="row-span-3 mt-28 flex-col gap-2 hidden md:flex">
         {/* <Command className="rounded-lg shadow-md h-fit">
           <CommandInput placeholder="Type a command or search..." />
           <CommandList className="">
@@ -117,7 +119,7 @@ export default function Listings() {
             </Command>
           </PopoverContent>
         </Popover>
-        <div className="px-2">
+        <div className="px-2 mt-2">
           <h1 className="mb-2">Distance from campus</h1>
           <div className="flex gap-x-2">
             <Slider
@@ -131,6 +133,22 @@ export default function Listings() {
           </div>
           <span className="float-right">
             {miles == 5 ? "5+" : miles} mile(s)
+          </span>
+        </div>
+        <div className="px-2">
+          <h1 className="mb-2">Distance from bus route</h1>
+          <div className="flex gap-x-2">
+            <Slider
+              className="mb-2 cursor-pointer"
+              defaultValue={[1]}
+              min={1}
+              max={5}
+              step={1}
+              onValueChange={(value: number[]) => setBusMiles(value[0])}
+            />
+          </div>
+          <span className="float-right">
+            {busMiles == 5 ? "5+" : busMiles} mile(s)
           </span>
         </div>
         <div className="px-2">
@@ -148,7 +166,7 @@ export default function Listings() {
           <span className="float-right">{beds == 5 ? "5+" : beds}</span>
         </div>
         <div className="px-2">
-          <h1 className="mb-2">Ameneties</h1>
+          <h1 className="mb-2">Amenities</h1>
           <div className="flex flex-col gap-2">
             {ameneties.map((amenity: any, index: number) => {
               return (
@@ -170,6 +188,18 @@ export default function Listings() {
             })}
           </div>
         </div>{" "}
+        <div className="mt-2">
+          <h1 className="mb-4">Price Range</h1>
+          <div>
+            <MultiRangeSlider
+              min={0}
+              max={4000}
+              onChange={({ min, max }) =>
+                console.log(`min = ${min}, max = ${max}`)
+              }
+            />
+          </div>
+        </div>
       </div>
 
       <div className="block md:hidden">
@@ -233,6 +263,22 @@ export default function Listings() {
             </span>
           </div>
           <div className="px-2">
+            <h1 className="mb-2">Distance from bus route</h1>
+            <div className="flex gap-x-2">
+              <Slider
+                className="mb-2 cursor-pointer"
+                defaultValue={[1]}
+                min={1}
+                max={5}
+                step={1}
+                onValueChange={(value: number[]) => setBusMiles(value[0])}
+              />
+            </div>
+            <span className="float-right">
+              {busMiles == 5 ? "5+" : busMiles} mile(s)
+            </span>
+          </div>
+          <div className="px-2">
             <h1 className="mb-2">
               Beds{" "}
               <span className="float-right">{beds == 5 ? "5+" : beds}</span>
@@ -248,7 +294,7 @@ export default function Listings() {
             />
           </div>
           <div className="px-2">
-            <h1 className="mb-2">Ameneties</h1>
+            <h1 className="mb-2">Amenities</h1>
             <div className="flex flex-col gap-2">
               {ameneties.map((amenity: any, index: number) => {
                 return (
@@ -270,10 +316,20 @@ export default function Listings() {
               })}
             </div>
           </div>{" "}
+          <div>
+            <h1 className="mb-2">Price Range</h1>
+            <MultiRangeSlider
+              min={0}
+              max={4000}
+              onChange={({ min, max }) =>
+                console.log(`min = ${min}, max = ${max}`)
+              }
+            />
+          </div>
         </div>
       </div>
 
-      <ScrollArea className="md:row-span-3 md:col-span-3 pt-10 md:pt-32 px-2">
+      <ScrollArea className="md:row-span-3 md:col-span-3 pt-10 md:pt-28 px-2">
         <div className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-2">
           {listings.map((house, index) => {
             return (

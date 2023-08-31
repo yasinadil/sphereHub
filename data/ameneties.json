@@ -1,5 +1,14 @@
 [
   {
+    "amenity": "Heating"
+  },
+  {
+    "amenity": "Cooling"
+  },
+  {
+    "amenity": "Furnished"
+  },
+  {
     "amenity": "WIFI"
   },
   {
