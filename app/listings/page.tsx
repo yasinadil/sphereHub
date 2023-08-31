@@ -217,6 +217,22 @@ export default function Listings() {
             </PopoverContent>
           </Popover>
           <div className="px-2">
+            <h1 className="mb-2">Distance from campus</h1>
+            <div className="flex gap-x-2">
+              <Slider
+                className="mb-2 cursor-pointer"
+                defaultValue={[1]}
+                min={1}
+                max={5}
+                step={1}
+                onValueChange={(value: number[]) => setMiles(value[0])}
+              />
+            </div>
+            <span className="float-right">
+              {miles == 5 ? "5+" : miles} mile(s)
+            </span>
+          </div>
+          <div className="px-2">
             <h1 className="mb-2">
               Beds{" "}
               <span className="float-right">{beds == 5 ? "5+" : beds}</span>
