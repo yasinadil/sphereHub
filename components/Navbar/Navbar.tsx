@@ -12,6 +12,7 @@ import Link from "next/link";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { ModeToggle } from "@/components/ui/ThemeToggle/Toggle";
 import { SearchBar } from "./SearchBar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Navbar() {
   return (
@@ -116,6 +117,12 @@ export default function Navbar() {
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
+              <Avatar>
+                <Link href={"/profile/193621"}>
+                  <AvatarImage src="https://github.com/shadcn.png" />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Link>
+              </Avatar>
             </div>
           </div>
         </div>
@@ -179,6 +186,12 @@ export default function Navbar() {
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
+              <Avatar>
+                <Link href={"/profile/193621"}>
+                  <AvatarImage src="https://github.com/shadcn.png" />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Link>
+              </Avatar>
 
               {/* <ModeToggle /> */}
             </div>

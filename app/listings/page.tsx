@@ -34,6 +34,7 @@ export default function Listings() {
   const [openMobile, setOpenMobile] = React.useState(false);
   const [value, setValue] = React.useState("");
   const [beds, setBeds] = React.useState(1);
+  const [miles, setMiles] = React.useState(1);
   const sortDataAlphabetically = (data: UniversityData[]): UniversityData[] => {
     return data.slice().sort((a, b) => {
       const institutionA = a.institution.toLowerCase();
@@ -116,6 +117,22 @@ export default function Listings() {
             </Command>
           </PopoverContent>
         </Popover>
+        <div className="px-2">
+          <h1 className="mb-2">Distance from campus</h1>
+          <div className="flex gap-x-2">
+            <Slider
+              className="mb-2 cursor-pointer"
+              defaultValue={[1]}
+              min={1}
+              max={5}
+              step={1}
+              onValueChange={(value: number[]) => setMiles(value[0])}
+            />
+          </div>
+          <span className="float-right">
+            {miles == 5 ? "5+" : miles} mile(s)
+          </span>
+        </div>
         <div className="px-2">
           <h1 className="mb-2">Beds</h1>
           <div className="flex gap-x-2">
@@ -249,6 +266,7 @@ export default function Listings() {
                 title={house.title}
                 price={house.price}
                 ameneties={house.badges}
+                match={house.match}
               />
             );
           })}

@@ -37,6 +37,11 @@ export default function ListingCard(props: any) {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+
+  const style = {
+    "--value": props.match,
+    "--size": "2.8rem",
+  } as React.CSSProperties;
   return (
     <div>
       {isClient && (
@@ -112,9 +117,18 @@ export default function ListingCard(props: any) {
                   +{props.ameneties.length - 3} more
                 </Badge>
               )}
-              <p className="font-black text-sm mt-4 pl-2">
-                ${props.price} / mo
-              </p>
+              <div>
+                <span className="float-left font-black text-sm mt-4 pl-2">
+                  ${props.price} / mo
+                </span>
+
+                <div
+                  className="float-right radial-progress text-[#102D87] text-[12px] "
+                  style={style}
+                >
+                  <span className="text-white"> {props.match} %</span>
+                </div>
+              </div>
             </CardDescription>
           </CardHeader>
           {/* <CardContent>

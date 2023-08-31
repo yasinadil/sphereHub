@@ -1,217 +1,171 @@
 [
   {
-    "title": "1 Bedroom Appartment",
+    "title": "1 Bedroom Cozy Appartment",
     "price": 800,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 80
+  },
+  {
+    "title": "1 Bedroom Luxurious",
+    "price": 800,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 32
+  },
+  {
+    "title": "Single Bedroom",
+    "price": 1700,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 78
+  },
+  {
+    "title": "Great View, Single Bed",
+    "price": 800,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 96
   },
   {
     "title": "1 Bedroom Appartment",
-    "price": 800,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
+    "price": 600,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 27
+  },
+  {
+    "title": "1 Bedroom, Close to University",
+    "price": 1000,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 66
+  },
+  {
+    "title": "Very Clean, 1 Bedroom",
+    "price": 900,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 19
   },
   {
     "title": "2 Bedroom Appartment",
-    "price": 1700,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "1 Bedroom Appartment",
-    "price": 800,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
+    "price": 2000,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 92
   },
   {
     "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
+    "price": 2600,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 81
   },
   {
     "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
+    "price": 2900,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 77
   },
   {
     "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
+    "price": 3200,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 55
   },
   {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
+    "title": "1 Bedroom",
+    "price": 1000,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 89
   },
   {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
-  },
-  {
-    "title": "3 Bedroom Appartment",
-    "price": 2000,
-    "badges": ["Heating", "AC", "Pets allowed", "Heating", "AC", "Pets allowed"]
+    "title": "1 Bedroom Studio",
+    "price": 1500,
+    "badges": [
+      "Heating",
+      "AC",
+      "Pets allowed",
+      "Heating",
+      "AC",
+      "Pets allowed"
+    ],
+    "match": 79
   }
 ]
